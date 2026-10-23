@@ -1,0 +1,13 @@
+{
+  "name": "pics.collage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Free photo collage PWA for iPhone and Android: grids, freestyle, stickers, text, backdrops. Runs offline; photos never leave the device.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && npx -y serve -l 5173 dist",
+    "deploy": "node build.mjs && sh deploy/deploy.sh"
+  }
+}

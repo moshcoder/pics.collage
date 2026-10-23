@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>pics.collage</title>
+<meta name="description" content="Make photo collages on your phone: grids, freestyle, stickers, text and backgrounds. Free, no account, works offline, your photos never leave the device.">
+<meta name="theme-color" content="#ff5c8a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Collage">
+<meta property="og:title" content="pics.collage">
+<meta property="og:description" content="Free photo collages on your phone. No account, works offline.">
+<meta property="og:image" content="https://pics.collage.pit.world/icon-512.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@700&family=Fredoka:wght@600&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="home">
+  <header class="home-head">
+    <img src="icon.svg" alt="" width="44" height="44">
+    <h1>pics<span>.collage</span></h1>
+  </header>
+  <main class="home-main">
+    <button id="new" class="big-btn" type="button">+ New collage</button>
+    <p class="lede">Grids, freestyle, stickers, text and backdrops. Free, no account. Your photos stay on this phone.</p>
+    <p id="a2hs" class="hint" hidden>Put it on your home screen: tap <b>Share</b> then <b>Add to Home Screen</b>.</p>
+    <h2 id="mine-title" hidden>My collages</h2>
+    <div id="projects" class="projects"></div>
+  </main>
+</section>
+
+<section id="editor" hidden>
+  <header class="top">
+    <button id="back" type="button">‹ Done</button>
+    <span class="spacer"></span>
+    <button id="undo" type="button" aria-label="Undo">↶</button>
+    <button id="redo" type="button" aria-label="Redo">↷</button>
+    <span class="spacer"></span>
+    <button id="export" class="pill" type="button">Save</button>
+  </header>
+  <div id="stage"><canvas id="cv"></canvas></div>
+  <div id="ctxbar" class="ctxbar" hidden></div>
+  <div id="panel" class="panel" hidden>
+    <div class="panel-head"><b id="panel-title"></b><button id="panel-close" type="button">Done</button></div>
+    <div id="panel-body" class="panel-body"></div>
+  </div>
+  <nav class="tools" id="tools">
+    <button type="button" data-tool="layout"><i>▦</i>Layout</button>
+    <button type="button" data-tool="photos"><i>🖼️</i>Photos</button>
+    <button type="button" data-tool="stickers"><i>😊</i>Stickers</button>
+    <button type="button" data-tool="text"><i>Aa</i>Text</button>
+    <button type="button" data-tool="background"><i>🎨</i>Backdrop</button>
+    <button type="button" data-tool="border"><i>◻︎</i>Border</button>
+    <button type="button" data-tool="size"><i>⤢</i>Size</button>
+  </nav>
+</section>
+
+<input id="file" type="file" accept="image/*" multiple hidden>
+
+<footer class="site-foot">
+<!--PFS_FOOTER-->
+</footer>
+<!--PIT_FOOTER-->
+<script src="app.js" type="module"></script>
+</body>
+</html>
