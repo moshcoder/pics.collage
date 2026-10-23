@@ -53,8 +53,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .proj .del { position: absolute; top: 6px; right: 6px; width: 28px; height: 28px; border-radius: 50%; border: 0; background: #000000a0; color: #fff; font-size: 16px; line-height: 28px; padding: 0; }
 .badge { text-align: center; margin: 32px 0 0; }
 .badge img { display: inline-block; vertical-align: middle; }
-/* One badge only: ours above links to the listing, so drop the shared footer's copy. */
-.pfs-footer__badge { display: none !important; }
 body.editing .badge { display: none; }
 .site-foot { max-width: 760px; margin: 32px auto 0; padding: 0 16px 16px; }
 body.editing { overflow: hidden; }
