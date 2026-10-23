@@ -7,5 +7,5 @@ set -eu
 cd "$(dirname "$0")/.."
 [ -f dist/index.html ] || node build.mjs
 HOST="${DEPLOY_HOST:-root@dev2.profullstack.com}"
-rsync -rlt --delete --chmod=D755,F644 dist/ "$HOST:/var/www/pics.collage/"
+rsync -rltp --delete --chmod=D755,F644 dist/ "$HOST:/var/www/pics.collage/"
 echo "deployed to $HOST:/var/www/pics.collage"

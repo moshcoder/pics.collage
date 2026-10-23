@@ -21,7 +21,7 @@ const pfs = `<footer data-profullstack-footer data-site="${SITE}" data-links='[{
 
 let pit = '';
 try {
-  const r = await fetch(`https://pit.world/snippets/footer.html?site=${NAME}`, { signal: AbortSignal.timeout(8000) });
+  const r = await fetch(`https://pit.world/snippets/footer.html?site=${NAME}.pit.world`, { signal: AbortSignal.timeout(8000) });
   if (r.ok) pit = (await r.text()).trim();
 } catch (err) {
   console.warn('pit.world footer unavailable, building without it:', err.message);
