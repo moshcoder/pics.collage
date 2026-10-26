@@ -14,7 +14,7 @@ const SOURCE = 'https://github.com/moshcoder/pics.collage';
 rmSync('dist', { recursive: true, force: true });
 cpSync('src', 'dist', { recursive: true });
 
-const ring = execFileSync('npx', ['-y', '@profullstack/footer@latest', 'html', '--site', SITE,
+const ring = execFileSync('npx', ['-y', '@profullstack/footer@0.3.0', 'html', '--site', SITE,
   '--link', `Source=${SOURCE}`, '--since', '2026'], { encoding: 'utf8' }).trim();
 const pfs = `<footer data-profullstack-footer data-site="${SITE}" data-links='[{"label":"Source","href":"${SOURCE}"}]'>\n${ring}\n</footer>\n`
   + '<script type="module" src="https://cdn.jsdelivr.net/npm/@profullstack/footer@latest/src/embed.js"></script>';
